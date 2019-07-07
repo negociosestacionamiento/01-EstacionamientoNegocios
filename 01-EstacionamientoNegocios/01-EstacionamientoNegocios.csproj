@@ -110,5 +110,17 @@
   <ItemGroup>
     <Resource Include="Martz90-Hex-Car.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Iconos\icons8-car-badge-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Iconos\icons8-color-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-color-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Iconos\p.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
