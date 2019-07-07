@@ -11,13 +11,13 @@
         Title="Estacionamiento - Programacion de negocios" Height="600" Width="1080" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid Background="#0D2644">
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
+            <RowDefinition Height="150"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0">
-            <materialDesign:Card Background="#7CBEE0" Padding="20" Margin="16">
-                <TextBlock FontSize="25" Foreground="White" Style="{DynamicResource MaterialDesignTitleTextBlock}"><Run Text="Mi Estacionamiento"/></TextBlock>
+            <materialDesign:Card Background="#CC4D11" Padding="30" Margin="16">
+                <TextBlock FontSize="30" Foreground="White" Style="{DynamicResource MaterialDesignTitleTextBlock}"><Run Text="MI ESTACIONAMIENTO"/></TextBlock>
             </materialDesign:Card>
         </Grid>
 
@@ -29,8 +29,8 @@
             </Grid.ColumnDefinitions>
 
 
-            <StackPanel Orientation="Vertical" Grid.Column="0" Margin="0,75,0,0">
-                <Button Width="200" Background="#CC4D11" Height="200" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" >
+            <StackPanel Orientation="Vertical" Grid.Column="0" Margin="0,50,0,0">
+                <Button x:Name="AgregarVehiculo" Width="200" Background="#7CBEE0" Height="200" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" Click="AgregarVehiculo_Click" >
                     <StackPanel>
                         <materialDesign:PackIcon Kind="Parking" Width="100" Height="100" Foreground="White"/>
                     </StackPanel>
@@ -38,16 +38,16 @@
                 <TextBlock Text="AGREGAR VEHICULO" FontSize="30" Foreground="#CFEAFF" HorizontalAlignment="Center" FontFamily="roboto"  Margin="0,15,0,0"/>
             </StackPanel>
             
-            <StackPanel Orientation="Vertical" Grid.Column="1" Margin="0,75,0,0">
-                <Button Width="200" Background="#CC4D11" Height="200" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" >
+            <StackPanel Orientation="Vertical" Grid.Column="1" Margin="0,50,0,0">
+                <Button x:Name="SalidaDeVehiculo" Width="200" Background="#7CBEE0" Height="200" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" Click="SalidaDeVehiculo_Click">
                     <StackPanel>
                         <materialDesign:PackIcon Kind="Transportation" Width="100" Height="100" Foreground="White"/>
                     </StackPanel>
                 </Button>
                 <TextBlock Text="SALIDA DE VEHICULO" FontSize="30" Foreground="#CFEAFF" HorizontalAlignment="Center" FontFamily="roboto"  Margin="0,15,0,0"/>
             </StackPanel>
-            <StackPanel Orientation="Vertical" Grid.Column="2" Margin="0,75,0,0">
-                <Button Width="200" Background="#CC4D11" Height="200" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" >
+            <StackPanel Orientation="Vertical" Grid.Column="2" Margin="0,50,0,0">
+                <Button x:Name="Historial" Width="200" Background="#7CBEE0" Height="200" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" Click="Historial_Click" >
                     <StackPanel>
                         <materialDesign:PackIcon Kind="History" Width="100" Height="100" Foreground="White"/>
                     </StackPanel>
