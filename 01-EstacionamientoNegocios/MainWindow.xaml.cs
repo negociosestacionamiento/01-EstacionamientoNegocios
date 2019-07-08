@@ -24,5 +24,24 @@ namespace _01_EstacionamientoNegocios
         {
             InitializeComponent();
         }
+
+        private void AgregarVehiculo_Click(object sender, RoutedEventArgs e)
+        {
+            AgregarVehiculo win = new AgregarVehiculo();
+            win.Show();
+        }
+
+        private void SalidaDeVehiculo_Click(object sender, RoutedEventArgs e)
+        {
+            VehiculoSalida win = new VehiculoSalida();
+            win.Show();
+
+        }
+
+        private void Historial_Click(object sender, RoutedEventArgs e)
+        {
+            Historial win = new Historial();
+            win.Show();
+        }
     }
 }
