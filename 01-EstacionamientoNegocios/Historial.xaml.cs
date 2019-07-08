@@ -23,11 +23,31 @@ namespace _01_EstacionamientoNegocios
     /// </summary>
     public partial class Historial : Window
     {
-        // Variable miembro
         SqlConnection sqlconnection;
+        // Variable miembro
         public Historial()
         {
+            
             InitializeComponent();
+                /*
+            string connectionString = ConfigurationManager.ConnectionStrings["_01_EstacionamientoNegocios.Properties.Settings.Default.BD_ESTACIONAMIENTO_CMConnectionString"].ConnectionString;
+            sqlconnection = new SqlConnection(connectionString);
+
+            MostrarTodo();*/
         }
+        /*
+        private void MostrarTodo()
+        {
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = ConfigurationManager.ConnectionStrings["_01_EstacionamientoNegocios.Properties.Settings.EstacionamientoPConnectionString"].ConnectionString;
+            con.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT * FROM [EstacionamientoP].[dbo].[Datos]";
+            cmd.Connection = con;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataView vw = new DataView();
+            gi.ItemsSource = vw;
+        }
+        */
     }
 }

@@ -8,17 +8,57 @@
         xmlns:materialDesignConverters="clr-namespace:MaterialDesignThemes.Wpf.Converters;assembly=MaterialDesignThemes.Wpf"
         mc:Ignorable="d"
         Title="Agregar Vehiculo" Height="450" Width="800"  WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
-    <Grid Background="#CFEAFF">
+    <Grid Background="#7CBEE0" >
         <Grid.RowDefinitions>
-            <RowDefinition Height="75"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="225"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0">
-            <materialDesign:Card Background="#CC4D11" Padding="10" Margin="16">
-                <TextBlock FontSize="15" Foreground="White" Style="{DynamicResource MaterialDesignTitleTextBlock}"><Run Text="AGREGAR VEHICULO"/></TextBlock>
+            <materialDesign:Card Background="#CC4D11" Padding="20" Margin="16">
+                <TextBlock FontSize="20" Foreground="White" Style="{DynamicResource MaterialDesignTitleTextBlock}"><Run Text="AGREGAR VEHICULO"/></TextBlock>
             </materialDesign:Card>
         </Grid>
-        
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Vertical" Grid.Column="0" VerticalAlignment="Center">
+                <ListViewItem Margin="10,5,5,5" Background="#CFEAFF">
+                    <StackPanel Orientation="Horizontal" >
+                        <TextBlock Text="Placa" FontFamily="roboto" FontSize="20" VerticalAlignment="Bottom" />
+                        <TextBox Width="300" Margin="20,0,0,0" FontSize="20"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Margin="10,5,5,5" Background="#CFEAFF">
+                    <StackPanel Orientation="Horizontal" >
+                        <TextBlock Text="Tipo de vehiculo" FontFamily="roboto" FontSize="20" VerticalAlignment="Bottom" />
+                        <TextBox Width="200" Margin="20,0,0,0" FontSize="20"/>
+                    </StackPanel>
+                </ListViewItem>
+
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Grid.Column="1" VerticalAlignment="Center">
+                <ListViewItem Margin="10,5,10,5" Background="#CFEAFF">
+                    <StackPanel Orientation="Horizontal" >
+                        <TextBlock Text="Hora Entrada" FontFamily="roboto" FontSize="20" VerticalAlignment="Bottom" />
+                        <materialDesign:TimePicker Margin="20,0,0,0" FontSize="20"/>
+                    </StackPanel>
+                </ListViewItem>
+               
+                <ListViewItem Margin="10,5,10,5" Background="#CFEAFF">
+                    <StackPanel Orientation="Horizontal" >
+                        <TextBlock Text="Estado" FontFamily="roboto" FontSize="20" VerticalAlignment="Bottom" />
+                        <ComboBox Width="200    " Margin="20,0,0,0" FontSize="20"/>
+                    </StackPanel>
+                </ListViewItem>
+            </StackPanel>
+            
+        </Grid>
+
+        <Button Grid.Row="2" Margin="20" Content="AGREGAR ENTRADA" Background="#0D2644" BorderBrush="White"/>
     </Grid>
 </Window>

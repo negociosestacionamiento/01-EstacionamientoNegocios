@@ -45,6 +45,7 @@
       <HintPath>..\packages\MaterialDesignThemes.2.5.1\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -64,6 +65,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Entrada.cs" />
+    <Compile Include="VehiculoSalida.xaml.cs">
+      <DependentUpon>VehiculoSalida.xaml</DependentUpon>
+    </Compile>
     <Page Include="AgregarVehiculo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -90,11 +95,12 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="VehiculoSalida.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MyConnection.cs" />
-    <Compile Include="MyConnectionOleDb.cs" />
-    <Compile Include="MyConnectionSql.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -123,18 +129,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Martz90-Hex-Car.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Iconos\icons8-car-badge-100.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Iconos\icons8-color-100.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="icons8-color-100.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Iconos\p.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

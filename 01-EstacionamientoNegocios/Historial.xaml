@@ -8,21 +8,28 @@
         xmlns:materialDesignConverters="clr-namespace:MaterialDesignThemes.Wpf.Converters;assembly=MaterialDesignThemes.Wpf"
         mc:Ignorable="d"
         Title="Historial" Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
-    <Grid Background="#CFEAFF">
+    <Grid Background="#7CBEE0">
         <Grid.RowDefinitions>
         <RowDefinition Height="75"/>
         <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0">
-            <materialDesign:Card Background="#CC4D11" Padding="10" Margin="16">
-                <TextBlock FontSize="15" Foreground="White" Style="{DynamicResource MaterialDesignTitleTextBlock}"><Run Text="HISTORIAL"/></TextBlock>
-            </materialDesign:Card>
-        </Grid>
+        
+            <Grid Grid.Row="0">
+                <materialDesign:Card Background="#CC4D11" Padding="10" Margin="16">
+                    <TextBlock FontSize="15" Foreground="White" Style="{DynamicResource MaterialDesignTitleTextBlock}"><Run Text="HISTORIAL"/></TextBlock>
+                </materialDesign:Card>
+            </Grid>
 
-        <StackPanel Grid.Row="1">
-            <DataGrid x:Name="HitorialGrid" Margin="20" Height="300"/>
-        </StackPanel>
+        <DataGrid x:Name="gi" Grid.Row="1" Margin="20" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding HoraEntrada}" Header="Hora de entrada" Width="*"/>
+                <DataGridTextColumn Binding="{Binding TipoVehiculo}" Header="Tipo de vehiculo" Width="*"/>
+                <DataGridTextColumn Binding="{Binding horaSalida}" Header="Hora de salida" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Total}" Header="Total" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Total}" Header="Estado" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
 
     </Grid>
 </Window>

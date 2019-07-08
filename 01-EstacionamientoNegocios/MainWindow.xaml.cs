@@ -33,6 +33,8 @@ namespace _01_EstacionamientoNegocios
 
         private void SalidaDeVehiculo_Click(object sender, RoutedEventArgs e)
         {
+            VehiculoSalida win = new VehiculoSalida();
+            win.Show();
 
         }
 
