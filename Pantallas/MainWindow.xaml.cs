@@ -35,7 +35,8 @@ namespace Pantallas
             {
                 V.Add(new Tipos
                 {
-                    nombre = dr[0].ToString(),
+                    idTipo = dr[0].ToString(),
+                    TipoNombre = dr[1].ToString(),
 
                 });
             }
@@ -45,7 +46,8 @@ namespace Pantallas
 
         public class Tipos
         {
-            public string nombre { get; set; }
+            public string idTipo { get; set; }
+            public string TipoNombre { get; set; }
         }
     }
 

@@ -35,9 +35,9 @@ namespace Clases_Datos
             DataTable TablaTipoVehiculo = new DataTable();
             try
             {
-                SqlCommand SqlCmd = new SqlCommand("SP_DeplegarTipoVehiculo", Con);
-                SqlCmd.CommandType = CommandType.StoredProcedure;
-                SqlDataAdapter sqlData = new SqlDataAdapter(SqlCmd);
+                SqlCommand Cmd = new SqlCommand("SP_DeplegarTipoVehiculo", Con);
+                Cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter sqlData = new SqlDataAdapter(Cmd);
                 using (sqlData)
                 {
                     sqlData.Fill(TablaTipoVehiculo);
