@@ -31,7 +31,6 @@ namespace _01_EstacionamientoNegocios
         public MainWindow()
         {
             //EstacionamientoConnectionString
-            //string connectionString = ConfigurationManager.ConnectionStrings["_01_EstacionamientoNegocios.Properties.Settings.EstacionamientoConnectionString1"].ConnectionString;
             string connectionString2 = @"server=DESKTOP-536T0JD\SQLEXPRESS; Initial Catalog = BD_ESTACIONAMIENTO_CM; Integrated Security = True;";
 
             sqlconnection = new SqlConnection(connectionString2);
@@ -40,7 +39,8 @@ namespace _01_EstacionamientoNegocios
 
             
             InitializeComponent();
-            MostarTipoVehiculos();
+            //starTipoVehiculos();
+            MostarVehiculo2();
         }
         private void MostarVehiculos()
         {
@@ -101,6 +101,31 @@ namespace _01_EstacionamientoNegocios
                     // ¿Quién es la referencia de los datos para el ListBox (popular)
                     lsbInfo.ItemsSource = tablaTipoVehiculo.DefaultView;
                 }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+        }
+        public void MostarVehiculo2()
+        {
+
+            DataTable TablaVehiculo = new DataTable();
+
+            try
+            {     
+                // Crear el comando con el Stored Procedure
+                SqlCommand sqlCommand = new SqlCommand("dbo.SP_MostrarVehiculo", sqlconnection);
+
+                // Establecer el comando como un Stored Procedure
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                // Parámetro
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                using (sqlDataAdapter)
+                {
+                    sqlDataAdapter.Fill(TablaVehiculo);
+                }
+               
             }
             catch (Exception e)
             {
