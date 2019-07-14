@@ -31,9 +31,6 @@ namespace Pantallas
         {
             try
             {
-                
-               
-
                 string query = string.Format("REGISTRO_VEHICULO");
                 SqlCommand command = new SqlCommand(query);
 

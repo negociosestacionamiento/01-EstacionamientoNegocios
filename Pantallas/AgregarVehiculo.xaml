@@ -25,6 +25,5 @@
         <TextBox x:Name="txtHoraEntrada" Grid.Row="2" Grid.Column="1" Margin="30" FontSize="20"/>
         <Button x:Name="Guardar" Content="GUARDAR" Width="300" Height="50" Grid.Column="0" Grid.Row="3" Click="Guardar_Click"/>
         <ListBox x:Name="lsbInfo" Grid.Row="4" Grid.Column="1" Margin="10"/>
-        
     </Grid>
 </Window>
