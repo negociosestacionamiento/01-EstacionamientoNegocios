@@ -135,6 +135,28 @@ namespace _01_EstacionamientoNegocios
 
         private void Guardar_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                SqlConnection connection = new SqlConnection(conexion.Cn);
+
+                string query = string.Format("REGISTRO_TIPO_VEHICULO");
+                SqlCommand command = new SqlCommand(query,connection);
+
+                command.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+
+                using (adapter)
+                {
+                    command.Parameters.AddWithValue("@nombre", Nombre);
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Tipo de vehiculo Guardado");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            
 
         }
     }

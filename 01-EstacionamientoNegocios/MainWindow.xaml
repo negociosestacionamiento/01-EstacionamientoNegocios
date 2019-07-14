@@ -5,10 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_01_EstacionamientoNegocios"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    
+        Title="Agregar Veiculo" Height="500" Width="800">
+
     <Grid>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
@@ -16,12 +18,14 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock Text="NOMBRE DE TIPO" FontSize="20" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBox x:Name="Nombre" Grid.Row="0" Grid.Column="1" FontSize="20" Margin="30"/>
-        <TextBlock Text="ID TIPO" FontSize="20" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBox x:Name="ID" Grid.Row="1" Grid.Column="1" Margin="30" FontSize="20"/>
-        <Button x:Name="Guardar" Content="GUARDAR" Width="300" Height="50" Grid.Column="0" Grid.Row="2" Click="Guardar_Click"/>
-        <ListBox x:Name="lsbInfo" Grid.Row="2" Grid.Column="3"/>
+        <TextBlock Text="PLACA" FontSize="20" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="129,38,10.4,29.4"/>
+        <TextBox x:Name="txtPlaca" Grid.Row="0" Grid.Column="2" FontSize="20" Grid.ColumnSpan="4" Margin="30"/>
+        <TextBlock Text="TIPO VEHICULO" FontSize="20" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <ComboBox x:Name="ID" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3" Margin="30" FontSize="20"/>
+        <Button x:Name="btnGuardar" Content="GUARDAR" Width="300" Height="50" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Click="Guardar_Click"/>
+        <ListBox x:Name="lsbInfo" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" Grid.RowSpan="4" Margin="20"/>
     </Grid>
 </Window>
