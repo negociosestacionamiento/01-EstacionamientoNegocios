@@ -1,0 +1,28 @@
+﻿<Window x:Class="Pantallas.Historial"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pantallas"
+        mc:Ignorable="d"
+       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:materialDesignConverters="clr-namespace:MaterialDesignThemes.Wpf.Converters;assembly=MaterialDesignThemes.Wpf"
+        
+        Title="Historial" Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#262738">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <Grid Grid.Row="0">
+            <materialDesign:Card Background="#EECEFF" Padding="20" Margin="16">
+                <TextBlock FontSize="20" Foreground="#262738"  FontFamily="Roboto" Style="{DynamicResource MaterialDesignTitleTextBlock}"><Run Text="HISTORIAL"/></TextBlock>
+            </materialDesign:Card>
+        </Grid>
+
+        <ListBox Grid.Row="2" Background="#FEF6FF" Margin="20" />
+
+    </Grid>
+</Window>

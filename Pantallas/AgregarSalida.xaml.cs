@@ -11,22 +11,17 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using System.Data;
-using System.Data.SqlClient;
-using Clases_Datos;
 
 namespace Pantallas
 {
     /// <summary>
-    /// Lógica de interacción para AgregarVehiculo.xaml
+    /// Lógica de interacción para AgregarSalida.xaml
     /// </summary>
-    public partial class AgregarVehiculo : Window
+    public partial class AgregarSalida : Window
     {
-        public AgregarVehiculo()
+        public AgregarSalida()
         {
             InitializeComponent();
         }
-
-
     }
 }

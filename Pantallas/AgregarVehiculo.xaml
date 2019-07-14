@@ -5,25 +5,48 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pantallas"
         mc:Ignorable="d"
-        Title="AgregarVehiculo" Height="450" Width="800">
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:materialDesignConverters="clr-namespace:MaterialDesignThemes.Wpf.Converters;assembly=MaterialDesignThemes.Wpf"
+        Title="Agregar Vehiculo" Height="450" Width="800" Background="#262738" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" >
+    
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="225"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock Text="PLACA" FontSize="20" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBox x:Name="txtPlaca" Grid.Row="0" Grid.Column="1" FontSize="20" Margin="30"/>
-        <TextBlock Text="ID TIPO" FontSize="20" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBox x:Name="txtIdVehiculo" Grid.Row="1" Grid.Column="1" Margin="30" FontSize="20"/>
-        <TextBlock Text="HORA DE ENTRADA" Grid.Column="0" Grid.Row="2" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <TextBox x:Name="txtHoraEntrada" Grid.Row="2" Grid.Column="1" Margin="30" FontSize="20"/>
-        <Button x:Name="Guardar" Content="GUARDAR" Width="300" Height="50" Grid.Column="0" Grid.Row="3" Click="Guardar_Click"/>
-        <ListBox x:Name="lsbInfo" Grid.Row="4" Grid.Column="1" Margin="10"/>
+
+        <Grid Grid.Row="0">
+            <materialDesign:Card Background="#EECEFF" Padding="20" Margin="16">
+                <TextBlock FontSize="20" Foreground="#262738"  FontFamily="Roboto" Style="{DynamicResource MaterialDesignTitleTextBlock}"><Run Text="AGREGAR VEHICULO"/></TextBlock>
+            </materialDesign:Card>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <StackPanel Orientation="Vertical" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <ListViewItem Margin="10,5,5,5" Background="Transparent">
+                    <StackPanel Orientation="Horizontal" >
+                        <TextBlock Text="Placa" FontFamily="roboto" FontSize="20" VerticalAlignment="Bottom" Foreground="#FEF6FF"/>
+                        <TextBox Width="300" Margin="20,0,0,0" FontSize="20" Foreground="#FEF6FF" BorderBrush="#FEF6FF"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Margin="10,5,5,5" Background="Transparent">
+                    <StackPanel Orientation="Horizontal" >
+                        <TextBlock Text="Tipo de vehiculo" FontFamily="roboto" FontSize="20" VerticalAlignment="Bottom" Foreground="#FEF6FF" />
+                        <ComboBox Width="200" Margin="20,0,0,0" FontSize="20" Foreground="#FEF6FF" BorderBrush="#FEF6FF"/>
+                    </StackPanel>
+                </ListViewItem>
+
+            </StackPanel>
+         
+
+        </Grid>
+
+        <Button Grid.Row="2" Margin="20" Content="AGREGAR ENTRADA" Background="#8961CC" BorderBrush="#8961CC" Foreground="#FEF6FF" Width="250"/>
+
     </Grid>
 </Window>
