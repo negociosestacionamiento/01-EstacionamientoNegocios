@@ -79,13 +79,7 @@ namespace Pantallas
                 });
             }
             lbVehiculoDetalle.ItemsSource = D;
-
         }
-       
-
-
-       
-
         public class Tipos
         {
             public string idTipo { get; set; }
@@ -93,24 +87,18 @@ namespace Pantallas
         }
         public class Vehiculo
         {
-
             public string IdVehiculo { get; set; }
             public string Placa { get; set; }
             public string Tipo { get; set; }
             public string HoraEntrada { get; set; }
-
-
         }
-public class Detalle
-{
-    public string Placa { get; set; }
-    public string HoraEntrada { get; set; }
-    public string TipoVehiculo { get; set; }
-    public string HoraSalida { get; set; }
-    public string Cobro { get; set; }
-
-}
-
-
+        public class Detalle
+        {
+            public string Placa { get; set; }
+            public string HoraEntrada { get; set; }
+            public string TipoVehiculo { get; set; }
+            public string HoraSalida { get; set; }
+            public string Cobro { get; set; }
+        }
     }
 }
