@@ -61,8 +61,30 @@ namespace Pantallas
             }
             lbVehiculo.ItemsSource = V;
 
+            //mostrar detalle
+
+            DataTable dtd = EstacionamientoDetalle.DesplegarDetalleVehiculo();
+
+            IList<Detalle> D = new List<Detalle>();
+            foreach (DataRow dr in dtd.Rows)
+            {
+                D.Add(new Detalle
+                {
+                    Placa = dr[0].ToString(),
+                    HoraEntrada = dr[1].ToString(),
+                    TipoVehiculo = dr[2].ToString(),
+                    HoraSalida = dr[3].ToString(),
+                    Cobro = dr[4].ToString()
+
+                });
+            }
+            lbVehiculoDetalle.ItemsSource = D;
 
         }
+       
+
+
+       
 
         public class Tipos
         {
@@ -79,6 +101,15 @@ namespace Pantallas
 
 
         }
+public class Detalle
+{
+    public string Placa { get; set; }
+    public string HoraEntrada { get; set; }
+    public string TipoVehiculo { get; set; }
+    public string HoraSalida { get; set; }
+    public string Cobro { get; set; }
+
+}
 
 
     }

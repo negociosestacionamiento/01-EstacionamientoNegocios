@@ -11,9 +11,11 @@ namespace Clases_Datos
 {
     public class Datos_Detalle
     {
-        private int idVehiculo;
-        private double cobro;
+        private string placa;
+        private string horaEntrada;
+        private string tipoVehiculo;
         private string horaSalida;
+        private double cobro;
         private string busqueda;
 
         SqlConnection Con = new SqlConnection(Conexion.Cn);
@@ -22,9 +24,11 @@ namespace Clases_Datos
 
         }
 
-        public int IdVehiculo { get { return idVehiculo; } set => idVehiculo = value; }
-        public double Cobro { get { return cobro; } set => cobro = value; }
+        public string Placa { get { return placa; } set => placa = value; }
+        public string HoraEntrada { get { return horaEntrada; } set => horaEntrada = value; }
+        public string TipoVehiculo { get { return tipoVehiculo; } set => tipoVehiculo = value; }
         public string HoraSalida { get { return horaSalida; } set => horaSalida = value; }
+        public double Cobro { get { return cobro; } set => cobro = value; }
         public string Busqueda { get { return busqueda; } set => busqueda = value; }
 
         public DataTable DesplegarDetalleVehiculo()
