@@ -27,20 +27,40 @@ namespace Pantallas
         {
             InitializeComponent();
 
-            InitializeComponent();
-            DataTable dt = EstacionamientoTipoVehiculo.MostrarTipoVehiculo();
+            //mostrar vehiculo.tipo
+            DataTable dtt = EstacionamientoTipoVehiculo.MostrarTipoVehiculo();
 
-            IList<Tipos> V = new List<Tipos>();
-            foreach (DataRow dr in dt.Rows)
+            IList<Tipos> t = new List<Tipos>();
+            foreach (DataRow dr in dtt.Rows)
             {
-                V.Add(new Tipos
+                t.Add(new Tipos
                 {
                     idTipo = dr[0].ToString(),
                     TipoNombre = dr[1].ToString(),
 
                 });
             }
-            lbTipoVehiculo.ItemsSource = V;
+            lbTipoVehiculo.ItemsSource = t;
+
+            //mostrar vehiculo
+
+            DataTable dtv = EstacionamientoVehiculo.DesplegarVehiculo();
+
+            IList<Vehiculo> V = new List<Vehiculo>();
+            foreach (DataRow dr in dtv.Rows)
+            {
+                V.Add(new Vehiculo
+                {
+                    IdVehiculo = dr[0].ToString(),
+                    Placa = dr[1].ToString(),
+                    Tipo = dr[2].ToString(),
+                    HoraEntrada = dr[3].ToString(),
+
+
+                });
+            }
+            lbVehiculo.ItemsSource = V;
+
 
         }
 
@@ -49,6 +69,17 @@ namespace Pantallas
             public string idTipo { get; set; }
             public string TipoNombre { get; set; }
         }
-    }
+        public class Vehiculo
+        {
 
+            public string IdVehiculo { get; set; }
+            public string Placa { get; set; }
+            public string Tipo { get; set; }
+            public string HoraEntrada { get; set; }
+
+
+        }
+
+
+    }
 }
