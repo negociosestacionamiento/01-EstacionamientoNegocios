@@ -24,8 +24,9 @@ GO
 CREATE TABLE Estacionamiento.Detalle(
 	id INT IDENTITY PRIMARY KEY NOT NULL,
 	idVehiculo INT NOT NULL REFERENCES Estacionamiento.Vehiculo,
-	HoraSalida TIME(0),
-	Cobro MONEY
+	Cobro MONEY,
+	HoraSalida TIME(0) NOT NULL DEFAULT GETDATE()
+	
 )
 GO
 
@@ -113,11 +114,33 @@ BEGIN CATCH
 END CATCH
 GO
 
-EXEC ACTUALIZAR_VEHICULO 1,'HDN0001',3
+EXEC ACTUALIZAR_VEHICULO 3,'HDN0001',1
 GO
 SELECT * FROM Estacionamiento.Vehiculo
 GO
 
+CREATE PROC SP_Ingresar_Vehiculo_Detalle
+(
+	@idVehiculo INT ,
+	@Cobro MONEY	
+)
+AS BEGIN TRANSACTION
+BEGIN TRY
+	INSERT Estacionamiento.Detalle VALUES (@idVehiculo,@Cobro,getDate())
+	COMMIT
+END TRY
+BEGIN CATCH
+	ROLLBACK TRANSACTION	
+END CATCH
+GO
+
+
+EXEC SP_Ingresar_Vehiculo_Detalle 1,1234.2
+GO
+EXEC SP_Ingresar_Vehiculo_Detalle 2,546.2
+GO
+EXEC SP_Ingresar_Vehiculo_Detalle 3,23.4
+GO
 
 CREATE PROC SP_DeplegarTipoVehiculo
 AS BEGIN
