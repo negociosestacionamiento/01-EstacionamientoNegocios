@@ -1,0 +1,24 @@
+﻿<Window x:Class="_01_EstacionamientoNegocios.SalidaVehiculo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_01_EstacionamientoNegocios"
+        mc:Ignorable="d"
+        Title="SalidaVehiculo" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="240*"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="SALIDA DE VEHICULO" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Grid.ColumnSpan="2"/>
+        <ListBox Name="lbsSalida" Grid.Row="1" Grid.Column="0" Margin="15" Grid.ColumnSpan="2"/>
+        <Button Name="btnCobrar" Grid.Column="0" Grid.Row="2" Content="COBRAR" Margin="15"/>
+        <Button Name="btnVerHistorial" Grid.Column="1" Grid.Row="2" Content="VER HISTORIAL" Margin="15"/>
+    </Grid>
+</Window>
