@@ -52,7 +52,24 @@ namespace Clases_Datos
             }
             return TablaVehiculo;
         }
-
+        public DataTable DesplegarDetalle()
+        {
+            DataTable TablaVehiculo = new DataTable();
+            try
+            {
+                SqlCommand SqlCmd = new SqlCommand("EXEC SP_DesplegarEstacionamientoDetalle_Cobro 1", Con);
+                SqlDataAdapter sqlData = new SqlDataAdapter(SqlCmd);
+                using (sqlData)
+                {
+                    sqlData.Fill(TablaVehiculo);
+                }
+            }
+            catch (Exception)
+            {
+                TablaVehiculo = null;
+            }
+            return TablaVehiculo;
+        }
         public DataTable MostrarTipoVehiculo()
         {
             DataTable TablaTipoVehiculo = new DataTable();
