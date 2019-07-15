@@ -45,7 +45,8 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
-        <ListBox  HorizontalContentAlignment="Stretch" Name="lbVehiculoDetalle" Margin="0,30,0,0"  Grid.Column="2">
+        <ListBox  HorizontalContentAlignment="Stretch" Name="lb
+        Detalle" Margin="0,30,0,0"  Grid.Column="2">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid Margin="2">

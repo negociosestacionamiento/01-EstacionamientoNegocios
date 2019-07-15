@@ -26,7 +26,7 @@ namespace Pantallas
         public MainWindow()
         {
             InitializeComponent();
-            
+            /*
                         //mostrar vehiculo.tipo
                         DataTable dtt = EstacionamientoTipoVehiculo.MostrarTipoVehiculo();
 

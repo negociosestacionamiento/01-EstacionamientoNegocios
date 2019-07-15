@@ -25,13 +25,9 @@ namespace Pantallas
         public AgregarSalida()
         {
             InitializeComponent();
-        }
-
-        private void ListaEntradas_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
             //mostrar vehiculo
 
-            /*DataTable dtv = EstacionamientoVehiculo.IngresarVehiculo();
+            DataTable dtv = EstacionamientoVehiculo.DesplegarVehiculo();
 
             IList<Vehiculo> V = new List<Vehiculo>();
             foreach (DataRow dr in dtv.Rows)
@@ -41,12 +37,33 @@ namespace Pantallas
                     IdVehiculo = dr[0].ToString(),
                     Placa = dr[1].ToString(),
                     Tipo = dr[2].ToString(),
-                    HoraEntrada = dr[3].ToString(),
-
 
                 });
             }
-            lbVehiculo.ItemsSource = V;*/
+            ListaEntradas.ItemsSource = V;
+        }
+
+        private void ListaEntradas_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        public class Vehiculo
+        {
+            public string IdVehiculo { get; set; }
+            public string Placa { get; set; }
+            public string Tipo { get; set; }
+
+        }
+
+        private void Cobrar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void VHistorial_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -16,6 +16,11 @@ namespace Estacionamiento
             return new Datos_Vehiculo().MostrarTipoVehiculo();
         }
 
+        public static DataTable DesplegarVehiculo()
+        {
+            return new Datos_Vehiculo().DesplegarVehiculo();
+        }
+
         public static string IngresarVehiculo(string Placa, int Tipo)
         {
             Datos_Vehiculo Obj = new Datos_Vehiculo();
