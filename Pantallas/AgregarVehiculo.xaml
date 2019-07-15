@@ -1,0 +1,47 @@
+﻿<Window x:Class="Pantallas.AgregarVehiculo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pantallas"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:materialDesignConverters="clr-namespace:MaterialDesignThemes.Wpf.Converters;assembly=MaterialDesignThemes.Wpf"
+        Title="Agregar Vehiculo" Height="450" Width="800" Background="#262738" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" >
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="225"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <materialDesign:Card Background="#EECEFF" Padding="20" Margin="16">
+                <TextBlock FontSize="20" Foreground="#262738"  FontFamily="Roboto" Style="{DynamicResource MaterialDesignTitleTextBlock}"><Run Text="AGREGAR VEHICULO"/></TextBlock>
+            </materialDesign:Card>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <StackPanel Orientation="Vertical" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <ListViewItem Margin="10,5,5,5" Background="Transparent">
+                    <StackPanel Orientation="Horizontal" >
+                        <TextBlock Text="Placa" FontFamily="roboto" FontSize="20" VerticalAlignment="Bottom" Foreground="#FEF6FF"/>
+                        <TextBox x:Name="txtPlaca" Width="300" Margin="50,0,0,0" FontSize="20" Foreground="#FEF6FF" BorderBrush="#FEF6FF"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Margin="10,5,5,5" Background="Transparent">
+                    <StackPanel Orientation="Horizontal" >
+                        <TextBlock Text="Tipo de vehiculo" FontFamily="roboto" FontSize="20" VerticalAlignment="Bottom" Foreground="#FEF6FF" />
+                        <ComboBox x:Name="ComboTipo" Width="200" Margin="50,0,0,0" FontSize="20" Foreground="#FEF6FF" BorderBrush="#FEF6FF" />
+                    </StackPanel>
+                </ListViewItem>
+            </StackPanel>
+        </Grid>
+        <Button x:Name="Agregar" Grid.Row="2" Margin="20" Content="AGREGAR" Background="#8961CC" BorderBrush="#8961CC" Foreground="#FEF6FF" Width="250" Click="Agregar_Click"/>
+    </Grid>
+</Window>
