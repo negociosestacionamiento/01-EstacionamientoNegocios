@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using System.Data;
 using System.Data.SqlClient;
 using Clases_Datos;
+using Estacionamiento;
 
 namespace Pantallas
 {
@@ -22,11 +23,21 @@ namespace Pantallas
     /// </summary>
     public partial class AgregarVehiculo : Window
     {
+  
         public AgregarVehiculo()
         {
             InitializeComponent();
+            ComboTipo.DisplayMemberPath = "Nombre";
+            ComboTipo.SelectedValuePath = "idTipo";
+            ComboTipo.ItemsSource = EstacionamientoVehiculo.MostrarTipoVehiculo().DefaultView;
         }
 
+        string opt = "";
+        private void Agregar_Click(object sender, RoutedEventArgs e)
+        {
+            opt = EstacionamientoVehiculo.IngresarVehiculo(txtPlaca.Text, Convert.ToInt32(ComboTipo.SelectedValue));
+            MessageBox.Show(opt);
 
+        }
     }
 }

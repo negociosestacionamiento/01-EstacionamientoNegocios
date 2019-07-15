@@ -48,8 +48,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="Datos_Vehiculo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Datos_TipoVehiculo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Base.sql" />

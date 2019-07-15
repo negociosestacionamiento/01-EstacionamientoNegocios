@@ -22,7 +22,7 @@
             </materialDesign:Card>
         </Grid>
 
-        <ListBox Grid.Row="1" Background="#FEF6FF" Margin="20"/>
+        <ListBox x:Name="ListaEntradas" Grid.Row="1" Background="#FEF6FF" Margin="20" SelectionChanged="ListaEntradas_SelectionChanged"/>
 
         <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center">
             <Button Margin="10" Content="COBRAR" Background="#8961CC" BorderBrush="#8961CC" Foreground="#FEF6FF" Width="250"/>

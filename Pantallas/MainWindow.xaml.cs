@@ -26,7 +26,7 @@ namespace Pantallas
         public MainWindow()
         {
             InitializeComponent();
-            /*
+            
                         //mostrar vehiculo.tipo
                         DataTable dtt = EstacionamientoTipoVehiculo.MostrarTipoVehiculo();
 
@@ -44,7 +44,7 @@ namespace Pantallas
 
                         //mostrar vehiculo
 
-                        DataTable dtv = EstacionamientoVehiculo.DesplegarVehiculo();
+                        DataTable dtv = EstacionamientoVehiculo.IngresarVehiculo();
 
                         IList<Vehiculo> V = new List<Vehiculo>();
                         foreach (DataRow dr in dtv.Rows)

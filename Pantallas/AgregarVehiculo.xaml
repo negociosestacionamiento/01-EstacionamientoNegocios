@@ -31,22 +31,17 @@
                 <ListViewItem Margin="10,5,5,5" Background="Transparent">
                     <StackPanel Orientation="Horizontal" >
                         <TextBlock Text="Placa" FontFamily="roboto" FontSize="20" VerticalAlignment="Bottom" Foreground="#FEF6FF"/>
-                        <TextBox Width="300" Margin="20,0,0,0" FontSize="20" Foreground="#FEF6FF" BorderBrush="#FEF6FF"/>
+                        <TextBox x:Name="txtPlaca" Width="300" Margin="50,0,0,0" FontSize="20" Foreground="#FEF6FF" BorderBrush="#FEF6FF"/>
                     </StackPanel>
                 </ListViewItem>
                 <ListViewItem Margin="10,5,5,5" Background="Transparent">
                     <StackPanel Orientation="Horizontal" >
                         <TextBlock Text="Tipo de vehiculo" FontFamily="roboto" FontSize="20" VerticalAlignment="Bottom" Foreground="#FEF6FF" />
-                        <ComboBox Width="200" Margin="20,0,0,0" FontSize="20" Foreground="#FEF6FF" BorderBrush="#FEF6FF"/>
+                        <ComboBox x:Name="ComboTipo" Width="200" Margin="50,0,0,0" FontSize="20" Foreground="#FEF6FF" BorderBrush="#FEF6FF" />
                     </StackPanel>
                 </ListViewItem>
-
             </StackPanel>
-         
-
         </Grid>
-
-        <Button Grid.Row="2" Margin="20" Content="AGREGAR ENTRADA" Background="#8961CC" BorderBrush="#8961CC" Foreground="#FEF6FF" Width="250"/>
-
+        <Button x:Name="Agregar" Grid.Row="2" Margin="20" Content="AGREGAR" Background="#8961CC" BorderBrush="#8961CC" Foreground="#FEF6FF" Width="250" Click="Agregar_Click"/>
     </Grid>
 </Window>
